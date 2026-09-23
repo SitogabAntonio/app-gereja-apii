@@ -1,0 +1,2 @@
+JWT_SECRET=ganti-dengan-secret-yang-panjang-dan-aman
+ALLOWED_ORIGINS=*

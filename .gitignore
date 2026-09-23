@@ -1,0 +1,9 @@
+node_modules/
+.env
+.dev.vars
+.env.local
+uploads/
+.DS_Store
+*.log
+database.db
+.wrangler/

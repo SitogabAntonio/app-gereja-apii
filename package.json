@@ -1,0 +1,26 @@
+{
+  "name": "app-gereja-apii",
+  "version": "1.0.0",
+  "description": "Cloudflare Workers API for APP GEREJA",
+  "main": "src/worker.mjs",
+  "scripts": {
+    "dev": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -Command npm.cmd run dev:worker",
+    "dev:worker": "C:\\Users\\user\\AppData\\Roaming\\npm\\wrangler.cmd dev",
+    "deploy": "wrangler deploy",
+    "cf:d1:migrate": "C:\\Users\\user\\AppData\\Roaming\\npm\\wrangler.cmd d1 execute app_gereja_db --remote --file=./migrations/0001_initial.sql",
+    "cf:d1:migrate:assets": "C:\\Users\\user\\AppData\\Roaming\\npm\\wrangler.cmd d1 execute app_gereja_db --remote --file=./migrations/0002_file_assets.sql",
+    "cf:d1:seed": "C:\\Users\\user\\AppData\\Roaming\\npm\\wrangler.cmd d1 execute app_gereja_db --remote --file=./migrations/seed.sql",
+    "cf:assets:upload": "powershell -ExecutionPolicy Bypass -File ./scripts/upload-assets-to-d1.ps1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^17.4.2"
+  },
+  "devDependencies": {
+    "wrangler": "^4.136.3"
+  }
+}
